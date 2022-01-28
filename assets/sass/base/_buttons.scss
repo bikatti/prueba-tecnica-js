@@ -1,0 +1,41 @@
+button {
+    &:focus {
+        outline: none;
+    }
+}
+
+.btn {
+    a, span{
+        @extend .medium;
+        font-family: $font1;
+        cursor: pointer;
+        outline: none;
+        font-size: $font-p;
+        line-height: 1.2;
+        padding: 10px 25px;
+        border-radius: 3px;
+        width: fit-content;
+        display: block;
+        transition: all 0.3s ease-in-out;
+        white-space: nowrap;
+
+        &:hover {
+            outline: none;
+            opacity: .8;
+        }
+    }
+}
+
+.btn--primary {
+    a, span {
+        color: $color-lightin;
+        background-color: $color-primary;
+    }
+}
+
+.btn--primary {
+    a, span {
+        color: $color-lightin;
+        background: $color-gradient;
+    }
+}

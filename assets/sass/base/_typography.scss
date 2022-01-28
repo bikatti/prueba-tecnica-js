@@ -1,0 +1,97 @@
+h1, h2, h3, p, small, i, label, span, button,
+ol, li, ul, a, input, label, .-h1, .-h2, .-h3 {
+    font-family: $font1;
+    line-height: 1.5;
+    color: $color-black;
+}
+
+
+h2 {
+    font-size: $font-h2;
+}
+
+h3 {
+    font-size: $font-h3;
+}
+
+h4 {
+    font-size: $font-h4;
+}
+
+p {
+    font-size: $font-p;
+    line-height: 1.7;
+}
+
+
+// Styles
+.uppercase {
+    text-transform: uppercase;
+}
+.black {
+    @include Font1Weight(9);
+}
+.extraBold {
+    @include Font1Weight(8);
+}
+.bold {
+    @include Font1Weight(7);
+}
+.semiBold {
+    @include Font1Weight(6);
+}
+.medium {
+    @include Font1Weight(5);
+}
+.regular {
+    @include Font1Weight(4);
+}
+.light {
+    @include Font1Weight(3);
+}
+.extraLight {
+    @include Font1Weight(2);
+}
+.thin {
+    @include Font1Weight(1);
+}
+
+
+.italic {
+    font-style: italic;
+}
+.center {
+    text-align: center;
+}
+.condensed {
+    letter-spacing: -1px;
+}
+.semiBoldCondensed {
+    letter-spacing: -0.35px;
+}
+
+// Color
+.colorLightin {
+    color: $color-lightin;
+}
+
+// Line-clamp
+.-lineClampTitle {
+    @include lineClamp(2);
+}
+.-lineClampTitleLong {
+    @include lineClamp(4);
+}
+.-lineClampText {
+    @include lineClamp(3);
+}
+
+
+// Titles
+.title {
+    @extend .regular;
+    font-size: 12px;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: $space0;
+}

@@ -1,0 +1,26 @@
+/* ------------------------------------
+ #                Header
+ #    menú principal del landing page
+ -------------------------------------- */
+
+.header {
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 15;
+
+    ul {
+        list-style: none;
+    }
+}
+
+.header__container {
+    @extend .-container;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+

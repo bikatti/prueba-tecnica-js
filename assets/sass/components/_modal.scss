@@ -1,0 +1,138 @@
+/* ------------------------------------
+ #               Modal
+ -------------------------------------- */
+
+.modal__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.64);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 100;
+    padding: 35px;
+    overflow: auto;
+}
+  
+.modal__container {
+    overflow: hidden;
+    background-color: $color-lightin;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 955px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.modal__content {
+    width: 100%;
+    padding: 40px 50px 37px 45px;
+    box-sizing: border-box;
+
+    .wp__share {
+        margin-top: 40px;
+        justify-content: flex-end;
+    }
+}
+
+.modal__header {
+    position: relative;
+
+    .modal__title {
+        font-weight: 900;
+        font-size: $font-h3;
+        line-height: 1.18;
+        margin-bottom: $space25;
+        color: $color-black;
+    }
+}
+
+.modal__text {
+    .wp-block-embed__wrapper {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 0;
+            box-shadow: none;
+        }
+    }
+}
+
+.modal__close {
+    position: absolute;
+    top: -15px;
+    right: -30px;
+
+    &::before { 
+        content: '';
+        display: block;
+        background: url('assets/img/close.svg') no-repeat 100% 100%;
+        width: 21px;
+        height: 21px;
+        z-index: 10;
+    }
+}
+  
+
+  
+/**************************\
+    Demo Animation Style
+\**************************/
+@keyframes mmfadeIn {
+      from { opacity: 0; }
+        to { opacity: 1; }
+}
+  
+@keyframes mmfadeOut {
+      from { opacity: 1; }
+        to { opacity: 0; }
+}
+  
+@keyframes mmslideIn {
+    from { transform: translateY(15%); }
+      to { transform: translateY(0); }
+}
+  
+@keyframes mmslideOut {
+      from { transform: translateY(0); }
+      to { transform: translateY(-10%); }
+}
+  
+.micromodal-slide {
+    display: none;
+}
+  
+.micromodal-slide.is-open {
+    display: block;
+}
+  
+.micromodal-slide[aria-hidden="false"] .modal__overlay {
+    animation: mmfadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+  
+.micromodal-slide[aria-hidden="false"] .modal__container {
+    animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1);
+}
+  
+.micromodal-slide[aria-hidden="true"] .modal__overlay {
+    animation: mmfadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+  
+.micromodal-slide[aria-hidden="true"] .modal__container {
+    animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);
+}
+  
+.micromodal-slide .modal__container,
+.micromodal-slide .modal__overlay {
+    will-change: transform;
+}

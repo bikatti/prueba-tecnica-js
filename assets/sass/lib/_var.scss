@@ -1,0 +1,56 @@
+ // colors
+$color-primary: #7B61FF;
+$color-gradient: linear-gradient(90deg, #7B61FF 0%, #8A32BF 141.11%);
+
+// colors grey
+$color-lightin: #fff;
+$color-lightgrey: #F1F1F1;
+$color-gray: #E5E6F0;
+$color-graydark: #696969;
+$color-black: #26222E;
+$color-dark: #00010A;
+
+// fonts
+$font1: 'Open Sauce One', sans-serif;
+
+// font-size
+$font-h1: 5.625rem;
+$font-h2: 3rem;
+$font-h3: 2.25rem;
+$font-h4: 1.5rem;
+$font-h5: 1.375rem;
+$font-h6: 1.25rem;
+$font-p: 1rem;
+$font-p2: 0.9375rem;
+
+// Border
+$borderBottom: 1px solid $color-gray;
+
+// Breakpoints
+$breakXl: 1200px;
+$breakLg: 992px;
+$breakMd: 768px;
+$breakSm: 576px;
+$breakXs: 425px;
+$breakXxs: 375px;
+$break0: 320px;
+
+// Spaces
+$spaceXl: 50px;
+$spaceBg: 40px;
+$spaceMd: 30px;
+$space25: 25px;
+$spaceRg: 20px;
+$spaceSm: 15px;
+$spaceXs: 10px;
+$spaceXxs: 8px;
+$space0: 5px;
+
+// z-index status
+$super: 1000;
+$parent: 10;
+$guest: 1;
+$anonymous: -1;
+
+// Shadow
+$shadow: 0px 2.17284px 32.5926px 9.77778px rgba(0, 0, 0, 0.1);

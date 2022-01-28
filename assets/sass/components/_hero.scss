@@ -1,0 +1,41 @@
+/* ------------------------------------
+ #                 Hero
+ -------------------------------------- */
+
+.hero {
+    position: relative;
+    padding-top: 150px;
+    padding-bottom: 170px;
+
+    @include mediaQueriesMinMd {
+        padding-top: 200px;
+        padding-bottom: 130px;
+    }
+}
+
+.hero__container {
+    @extend .container;
+}
+
+.hero__content {
+    margin: 0 auto;
+    max-width: 485px;
+
+    h1 {
+        font-size: $font-h2;
+        font-weight: 900;
+        line-height: 1;
+        margin-bottom: $spaceRg;
+        color: $color-black;
+    }
+
+    p {
+        margin-bottom: $space25;
+    }
+
+    @include mediaQueriesMinMd {
+        h1 {
+            font-size: $font-h1;
+        }
+    }
+}

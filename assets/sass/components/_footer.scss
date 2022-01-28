@@ -1,0 +1,32 @@
+/* ------------------------------------
+ #                Footer
+ -------------------------------------- */
+
+.footer {
+    position: relative;
+    margin-top: 150px;
+    background-color: $color-black;
+}
+
+.footer__container {
+    @extend .-container;
+    position: relative;
+    z-index: 1;
+    padding: 110px 9px 32px;
+}
+
+.footer__content {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+
+    ul {
+        list-style: none;
+    }
+    
+    @include mediaQueriesMinMd {
+        display: grid;
+        grid: auto / repeat(12, 1fr) ;
+        gap: 65px 30px; 
+    }
+}
