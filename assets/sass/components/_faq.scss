@@ -2,87 +2,82 @@
  #                 FAQ
  -------------------------------------- */
 
-.dropdown__container {
-    @extend .container-min-md;
-}
-
 .faq {
     position: relative;
-    padding: 20px 15px;
-    background-color: $color-lightin;
-    box-shadow: 0px 0px 12px rgba(44, 39, 56, 0.06);
+    padding-top: 180px;
 
-    &:not(:last-child) {
-        margin-bottom: 20px;
+    &::before {
+        display: block;
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: -190px;
+        left: -100px;
+        width: 380px;
+        height: 380px;
+        background: radial-gradient(50% 50% at 50% 50%, rgba(123, 97, 255, 0.7) 0%, rgba(123, 97, 255, 0.448437) 28.12%, rgba(123, 97, 255, 0) 100%);
+        filter: blur(30px);
     }
+}
+
+.faq__container {
+    @extend .container--fluid;
+}
+
+.faq__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+
+    .faq__title {
+        @extend .light;
+        font-size: 65px;
+        margin-bottom: 45px;
+        letter-spacing: -0.03em;
+    }
+
+    .btn {
+        margin-top: 60px;
+    }
+}
+
+.faq__info {
+    flex-basis: 45%;
+}
+
+.faq__questions {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex-basis: 45%;
+}
+
+.question {
+    padding: 22px 33px;
+    background-color: $color-gray;
+    border-radius: 20px;
+    position: relative;
     
-    .faq__title {
-        @extend .black;
-        font-size: $font-p;
-        line-height: 1.2;
-        list-style: none;
-        cursor: pointer;
-        max-width: 85%;
-
-        &::after {
-            content: '';
-            display: block;
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-            width: 16px;
-            height: 16px;
-            position: absolute;
-            top: 24px;
-            right: 18px;
-            background-image: url('assets/img/icons/go-down.svg');
-            transition: all 400ms ease-in;
-        }
-    }
-
-    @include mediaQueriesMinMd {
-        border-radius: 10px;
-        padding: 27px 38px;
-
-        .faq__title {
-            font-size: $font-h4;
-            max-width: 90%;
-
-            &::after {
-                top: 35px;
-                right: 30px;
-            }
-        }
-
+    &.acordion.active .icon--arrow::after {
+        transform: rotate(180deg);
     }
 }
 
-[open].faq {
-    .faq__title {
-        &::after {
-            transform: rotate(180deg);
-        }
-    }
-
-    .faq__description {
-        height: 100%;
-        visibility: visible;
-        opacity: 1;
-    }
+.question__title {
+    @extend .medium;
+    display: block;
+    max-width: 375px;
+    font-size: $font-h3;
+    line-height: 1.5;
+    cursor: pointer;
 }
 
-.faq__description {
-    visibility: hidden;
-    opacity: 0;
-    height: 0;
-    padding-top: 20px;
-    max-width: 96%;
-    transition: all 600ms ease-in;
+.question__content {
+    display: none;
+    margin-top: 20px;
+    margin-right: 40px;
 
-    p {
-        margin: 0;
-    }
-
-    p:not(:last-child) {
-        margin-bottom: 25px;
+    .acordion.active & {
+        display: block;
     }
 }

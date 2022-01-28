@@ -1,7 +1,7 @@
 h1, h2, h3, p, small, i, label, span, button,
 ol, li, ul, a, input, label, .-h1, .-h2, .-h3 {
     font-family: $font1;
-    line-height: 1.5;
+    line-height: 1.4;
     color: $color-black;
 }
 
@@ -14,13 +14,10 @@ h3 {
     font-size: $font-h3;
 }
 
-h4 {
-    font-size: $font-h4;
-}
-
 p {
+    @include Font1Weight(3);
     font-size: $font-p;
-    line-height: 1.7;
+    letter-spacing: -0.03em;
 }
 
 
@@ -89,9 +86,6 @@ p {
 
 // Titles
 .title {
-    @extend .regular;
-    font-size: 12px;
-    line-height: 1;
-    text-transform: uppercase;
-    margin-bottom: $space0;
+    @extend .light;
+    font-size: $font-h2;
 }

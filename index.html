@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Prueba Técnica</title>
 </head>
-<body>
+<body class="theBody">
     <header class="header">
         <div class="header__container">
             <div class="header__content">
@@ -34,7 +35,7 @@
                         </li>
                     </ul>
 
-                    <button class="btn btn--primary">Lorem ispum</button>
+                    <button class="btn btn--primary"><span>Lorem ispum</span></button>
                 </nav>
             </div>
         </div>
@@ -46,7 +47,7 @@
                 <div class="hero__content">
                     <h1 class="hero__title">Haz clic en el bóton</h1>
                     <p class="hero__subtitle">Pellentesque in ipsum id orci porta dapibus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
-                    <button class="btn btn--gradient">Hello, 👋</button>
+                    <button class="btn btn--gradient icon--hello"><span>Hello</span></button>
                 </div>
             </div>
         </section>
@@ -69,13 +70,59 @@
         <section class="faq">
             <div class="faq__container">
                 <div class="faq__content">
-                    <div class="faq__info"></div>
-                    .faq__questions
+                    <div class="faq__info">
+                        <h3 class="faq__title">Donec sollicitudin molestie malesuada.</h3>
+                        <p>Donec sollicitudin molestie malesuada.</p>
+                        <button class="btn btn--primary">
+                            <a href="https://github.com/bikatti/prueba-tecnica-js" target="_blank">Repo de github</a>
+                        </button>
+                    </div>
+
+                    <div class="faq__questions">
+                        <div class="question acordion">
+                            <span class="question__title">¿Praesent sapien massa, convallis a pellentesque nec? <i class="icon--arrow"></i> </span>
+                            <div class="question__content">
+                                <p>Pellentesque in ipsum id orci porta dapibus. Cras ultricies ligula sed magna dictum porta. Curabitur arcu erat, accumsan id imperdiet et.</p>
+                            </div>
+                        </div>
+                        <div class="question acordion active">
+                            <span class="question__title">¿Praesent sapien massa, convallis a pellentesque nec? <i class="icon--arrow"></i> </span>
+                            <div class="question__content">
+                                <p>Pellentesque in ipsum id orci porta dapibus. Cras ultricies ligula sed magna dictum porta. Curabitur arcu erat, accumsan id imperdiet et.</p>
+                            </div>
+                        </div>
+                        <div class="question acordion">
+                            <span class="question__title">¿Praesent sapien massa, convallis a pellentesque nec? <i class="icon--arrow"></i> </span>
+                            <div class="question__content">
+                                <p>Pellentesque in ipsum id orci porta dapibus. Cras ultricies ligula sed magna dictum porta. Curabitur arcu erat, accumsan id imperdiet et.</p>
+                            </div>
+                        </div>
+                        <div class="question acordion">
+                            <span class="question__title">¿Praesent sapien massa, convallis a pellentesque nec? <i class="icon--arrow"></i> </span>
+                            <div class="question__content">
+                                <p>Pellentesque in ipsum id orci porta dapibus. Cras ultricies ligula sed magna dictum porta. Curabitur arcu erat, accumsan id imperdiet et.</p>
+                            </div>
+                        </div>
+                        <div class="question acordion">
+                            <span class="question__title">¿Praesent sapien massa, convallis a pellentesque nec? <i class="icon--arrow"></i> </span>
+                            <div class="question__content">
+                                <p>Pellentesque in ipsum id orci porta dapibus. Cras ultricies ligula sed magna dictum porta. Curabitur arcu erat, accumsan id imperdiet et.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer"></footer>
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__content">
+                <span>Fin de la prueba. Hecho por <a href="https://bikatti.com/" target="_blank">Bikatti</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/js/index.js"></script>
 </body>
 </html>

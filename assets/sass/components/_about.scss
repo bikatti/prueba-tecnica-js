@@ -1,0 +1,40 @@
+/* ------------------------------------
+ #               About
+ -------------------------------------- */
+
+.about {
+    position: relative;
+    padding-top: 70px;
+}
+
+.about__container {
+    @extend .container;
+    border-radius: 60px;
+    background-color: $color-lightin;
+    box-shadow: $shadow;
+}
+
+.about__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 44px 50px;
+
+    .title {
+        margin-bottom: 32px;
+    }
+}
+
+.about__info {
+    flex-basis: 65%;
+    max-width: 530px;
+}
+
+.about__img {
+    flex-basis: 35%;
+
+    figure {
+        border-radius: 30px;
+    }
+}

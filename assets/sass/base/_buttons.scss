@@ -1,4 +1,6 @@
 button {
+    padding: 0;
+    
     &:focus {
         outline: none;
     }
@@ -10,10 +12,10 @@ button {
         font-family: $font1;
         cursor: pointer;
         outline: none;
-        font-size: $font-p;
+        font-size: $font-small;
         line-height: 1.2;
-        padding: 10px 25px;
-        border-radius: 3px;
+        padding: 16px 26px;
+        border-radius: 60px;
         width: fit-content;
         display: block;
         transition: all 0.3s ease-in-out;
@@ -33,7 +35,7 @@ button {
     }
 }
 
-.btn--primary {
+.btn--gradient {
     a, span {
         color: $color-lightin;
         background: $color-gradient;

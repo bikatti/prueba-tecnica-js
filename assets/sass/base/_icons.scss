@@ -1,0 +1,32 @@
+.icon--hello {
+    position: relative;
+
+    span::after {
+        display: inline-block;
+        content: '';
+        margin-left: 5px;
+        width: 15px;
+        height: 15px;
+        background-image: url('assets/img/hi.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        transition: transform ease-in .4s;
+    }
+}
+
+.icon--arrow {
+    &::after {
+        display: inline-block;
+        content: '';
+        margin-left: 5px;
+        width: 25px;
+        height: 15px;
+        background-image: url('assets/img/arrow.svg');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        transition: transform ease-in .4s;
+        position: absolute;
+        top: 40px;
+        right: 33px;
+    }
+}
