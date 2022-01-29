@@ -30,3 +30,17 @@
         right: 33px;
     }
 }
+
+
+.icon--cubo {
+    &::after {
+        display: block;
+        content: '';
+        width: 32px;
+        height: 32px;
+        background-image: url('assets/img/cubo.svg');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        transition: transform ease-in .4s;
+    }
+}

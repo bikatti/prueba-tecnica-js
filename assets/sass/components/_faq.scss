@@ -5,6 +5,7 @@
 .faq {
     position: relative;
     padding-top: 180px;
+    padding-bottom: 160px;
 
     &::before {
         display: block;
@@ -67,7 +68,7 @@
     @extend .medium;
     display: block;
     max-width: 375px;
-    font-size: $font-h3;
+    font-size: $font-h4;
     line-height: 1.5;
     cursor: pointer;
 }

@@ -1,12 +1,11 @@
 /* ------------------------------------
  #                Header
- #    menú principal del landing page
  -------------------------------------- */
 
 .header {
     box-sizing: border-box;
-    position: fixed;
-    top: 0;
+    position: absolute;
+    top: 50px;
     left: 0;
     right: 0;
     z-index: 15;
@@ -17,10 +16,102 @@
 }
 
 .header__container {
-    @extend .container;
+    @extend .container--fluid;
+}
+
+.header__content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
 }
 
+.header__navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 66%;
+    border-radius: 60px;
+    background-color: rgba(231, 231, 231, 0.6);
+    backdrop-filter: blur(4px);
+    padding: 7px 7px 7px 58px;
+}
+
+.navbar {
+    display: flex;
+    gap: 35px;
+    
+    a, button {
+        @extend .medium;
+        font-size: $font-p2;
+        color: $color-lightin;
+    }
+
+    span {
+        font-size: $font-p2;
+        color: $color-lightin;
+    }
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 80px;
+    border-radius: 16px;
+    background-color: #1F2123;
+    width: 100%;
+    max-width: 180px;
+    padding: 30px;
+    opacity: 0;
+    animation: 1.5s ease 0s normal forwards 1 slide-top;
+
+    &.submenu--group {
+        max-width: 580px;
+        left: 0;
+        flex-direction: row !important;
+        justify-content: space-between;
+
+        .submenu__group {
+            height: 210px;
+            max-width: 145px;
+            border-radius: 16px;
+            background-color: $color-primary;
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            cursor: pointer;
+
+            .icon--cubo {
+                padding-bottom: 8px;
+            }
+        }
+
+        ul {
+            padding-top: 15px;
+            display: grid;
+            grid: auto / repeat(2, 1fr);
+            gap: 0 20px;
+        }
+
+        .submenu__item {
+            max-width: 160px;
+            cursor: pointer;
+        }
+
+        .submenu__astra {
+            display: block;
+            padding-top: 8px;
+            font-size: 12px;
+            color: #C9CBD7;
+        }
+    }
+
+    &.active {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        opacity: 1;
+    }
+}

@@ -4,13 +4,11 @@
 
 .footer {
     position: relative;
+    padding: 40px 0;
 }
 
 .footer__container {
     @extend .container;
-    position: relative;
-    z-index: 1;
-    padding: 110px 9px 32px;
 }
 
 .footer__content {

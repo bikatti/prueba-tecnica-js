@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Prueba Técnica</title>
 </head>
-<body class="theBody">
+<body class="theBody" id="theBody">
     <header class="header">
         <div class="header__container">
             <div class="header__content">
@@ -31,7 +31,29 @@
                             </ul>
                         </li>
                         <li class="navbar__item">
-                            <a href="">Dropdonw 2</a>
+                            <button class="dropdown">Dropdown 2</button>
+                            <div class="submenu submenu--group dropdown__list">
+                                <div class="submenu__group">
+                                    <i class="icon--cubo"></i>
+                                    <span>Group</span>
+                                    <span class="submenu__astra">Curabitur arcu erat, accumsan id imperdie..</span>
+                                </div>
+
+                                <ul>
+                                    <li class="submenu__item">
+                                        <span>Item 1</span>
+                                        <span class="submenu__astra">Quisque velit nisi, pretium ut lacinia in, elementum.</span>
+                                    </li>
+                                    <li class="submenu__item">
+                                        <span>Item 2</span>
+                                        <span class="submenu__astra">Quisque velit nisi, pretium ut lacinia in, elementum.</span>
+                                    </li>
+                                    <li class="submenu__item">
+                                        <span>Item 3</span>
+                                        <span class="submenu__astra">Quisque velit nisi, pretium ut lacinia in, elementum.</span>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
                     </ul>
 
@@ -47,10 +69,32 @@
                 <div class="hero__content">
                     <h1 class="hero__title">Haz clic en el bóton</h1>
                     <p class="hero__subtitle">Pellentesque in ipsum id orci porta dapibus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
-                    <button class="btn btn--gradient icon--hello"><span>Hello</span></button>
+                    <button class="btn btn--gradient icon--hello modal-btn"><span>Hello</span></button>
+                    
+                    <div class="modal modal-slide">
+                        <div class="modal__overlay">
+                            <div class="modal__container">
+                                <div class="modal__content">
+                                    <header class="modal__header">
+                                        <span class="modal__byline">#abrio😋</span>
+                                        <h2 class="modal__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
+                                        <button class="modal__close modal-close"></button>
+                                    </header>
+                                    
+                                    <div class="modal__text">
+                                        <figure class="youtube-video">
+                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/HBdEkUgX95k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
+
         <section class="about">
             <div class="about__container">
                 <div class="about__content">
@@ -67,6 +111,7 @@
                 </div>
             </div>
         </section>
+
         <section class="faq">
             <div class="faq__container">
                 <div class="faq__content">
