@@ -1112,7 +1112,7 @@ button:focus {
   margin-left: 5px;
   width: 15px;
   height: 15px;
-  background-image: url("assets/img/hi.png");
+  background-image: url("https://bikatti.com/wp-content/uploads/2022/01/hi.png");
   background-repeat: no-repeat;
   background-size: 100%;
   -webkit-transition: -webkit-transform ease-in 0.4s;
@@ -1631,7 +1631,7 @@ button:focus {
   margin-left: 5px;
   width: 13px;
   height: 13px;
-  background-image: url("assets/img/heart.png");
+  background-image: url("https://bikatti.com/wp-content/uploads/2022/01/heart.png");
   background-repeat: no-repeat;
   background-size: 100%;
   -webkit-transition: -webkit-transform ease-in 0.4s;
